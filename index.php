@@ -4,23 +4,35 @@ define('THEMES', array('Smartphone', 'Tablette', 'PC portable', 'PC périphériq
 $themes = $_GET['themes'] ?? [];
 $cookieCounter = 1;
 
+// if (!empty($themes)) {
+//     echo "<script>
+// alert('Veuillez cocher 3 themes');
+// window.location.href='http://pineapple.localhost/index.php';
+// </script>";
+// } else {
+//     if (count($themes) != 3) {
+//         foreach ($themes as $theme) {
+//             if (empty(THEMES[$theme])) {
+//                 $error = 'Merci de ne pas modifier les valeurs';
+//                 break;
+//             } else {
+//                 $cookie = "cookie$cookieCounter";
+//                 setcookie($cookie, $theme, time() + (86400 * 30));
+//                 $cookieCounter++;
+//             }
+//         }
+//     }
+// }
+
 if (!empty($themes)) {
-    echo "<script>
-alert('Veuillez cocher 3 themes');
-window.location.href='http://pineapple.localhost/index.php';
-</script>";
-} else {
     if (count($themes) != 3) {
-        foreach ($themes as $theme) {
-            if (empty(THEMES[$theme])) {
-                $error = 'Merci de ne pas modifier les valeurs';
-                break;
-            } else {
-                $cookie = "cookie$cookieCounter";
-                setcookie($cookie, $theme, time() + (86400 * 30));
-                $cookieCounter++;
-            }
-        }
+        echo "<script>
+        alert('Veuillez cocher 3 themes');
+        window.location.href='http://pineapple.localhost/index.php';
+        </script>";
+        
+    } else {
+        echo count($themes);
     }
 }
 
