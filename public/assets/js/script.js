@@ -34,37 +34,57 @@ menuButton.addEventListener('click',function(){
 });
 
 // darkmode homemade
-const switchBtn = document.getElementById('switchMode');
+const switchBtn = document.querySelector('#switchMode img');
 const logo = document.querySelector('#logo');
 const header = document.querySelector('.header');
 const body = document.querySelector('body');
 const title = document.querySelector('.header-title')
 const burgerM = document.querySelector('#menu-button');
+const h2Actu = document.querySelector('.h1Home');
+const h2home = document.querySelector('.h2Home');
+const allP = document.querySelectorAll('p');
 
-console.log(burgerM);
+console.log(allP);
 // burgerM.style.color='rgb(0, 0, 0)';
 title.style.color='rgb(0, 0, 0)';
 header.style.backgroundColor='rgb(255, 255, 255)';
 body.style.backgroundColor='rgb(242, 242, 242)';
 switchBtn.style.color='rgb(239, 215, 0)';
+h2Actu.style.color='rgb(0, 0, 0)';
+h2home.style.color='rgb(0, 0, 0)';
+// allP.style.color='rgb(0, 0, 0)';
+allP.forEach(element => {
+    element.style.color='rgb(0, 0, 0)';
+    console.log(element);
+});
 
 switchBtn.addEventListener('click', () =>{
-    if (header.style.backgroundColor=='rgb(255, 255, 255)' && body.style.backgroundColor=='rgb(242, 242, 242)' && logo.src == 'http://pineapplephp.localhost/public/assets/img/pineappleDark.png' && title.style.color=='rgb(0, 0, 0)' && switchBtn.innerHTML=='☀️'){
-        console.log(getComputedStyle(title).color);
+    if (header.style.backgroundColor=='rgb(255, 255, 255)'){
         header.style.backgroundColor = '#000000';
         body.style.backgroundColor='rgb(51, 51, 51)';
-        logo.src='http://pineapplephp.localhost/public/assets/img/pineapple.png';
+        logo.src='/public/assets/img/pineapple.png';
         title.style.color='rgb(255, 255, 255)';
-        switchBtn.innerHTML='☾';
+        switchBtn.src='/public/assets/img/moon.png';
         switchBtn.style.color='rgb(0, 0, 0)';
         burgerM.style.color='rgb(255, 255, 255)';
+        h2Actu.style.color='rgb(255, 255, 255)';
+        h2home.style.color='rgb(255, 255, 255)';
+        allP.forEach(element => {
+            element.style.color='rgb(255, 255, 255)';
+        });
+        
     } else {
         header.style.backgroundColor= 'rgb(255, 255, 255)';
         body.style.backgroundColor='rgb(242, 242, 242)';
-        logo.src='http://pineapplephp.localhost/public/assets/img/pineappleDark.png';
+        logo.src='/public/assets/img/pineappleDark.png';
         title.style.color='rgb(0, 0, 0)';
-        switchBtn.innerHTML='☀️';
+        switchBtn.src='/public/assets/img/sun.png';
         switchBtn.style.color='rgb(255, 255, 255)';
         burgerM.style.color='rgb(0, 0, 0)';
+        h2Actu.style.color='rgb(0, 0, 0)';
+        h2home.style.color='rgb(0, 0, 0)';
+        allP.forEach(element => {
+            element.style.color='rgb(0, 0, 0)';
+        });
     }
 })

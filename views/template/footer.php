@@ -33,6 +33,7 @@
         <h5>Développé par Tristan Waquier, Anthonin Mouveaux et Alexis Ferrer</h5>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 <script src="../../public/assets/js/script.js"></script>
 </body>
 
