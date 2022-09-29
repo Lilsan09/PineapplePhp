@@ -69,7 +69,6 @@ switchBtn.addEventListener('click', () =>{
         switchBtn.style.color='rgb(0, 0, 0)';
         burgerM.style.color='rgb(255, 255, 255)';
         h2Actu.style.color='rgb(255, 255, 255)';
-        // h2home.style.color='rgb(255, 255, 255)';
         allP.forEach(element => {
             element.style.color='rgb(255, 255, 255)';
         });
@@ -92,4 +91,4 @@ switchBtn.addEventListener('click', () =>{
             element.style.color='rgb(0, 0, 0)';
         });
     }
-})
+});
