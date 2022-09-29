@@ -1,7 +1,12 @@
+@font-face {
+    font-family: gotham;
+    src: url(../assets/font/GOTHAMMEDIUM.TTF);
+}
 * {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: gotham;
 }
 
 body {
@@ -11,6 +16,55 @@ body {
 
 @media screen and (max-width: 425px) {
 
+
+    section {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    article {
+        width: 70%;
+        height: 70vh;
+        background-color: #FFFFFF;
+        position: relative;
+        top: 15%;
+        left: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    
+    form {
+        margin-top: 3%;
+        margin-bottom: 3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    form p {
+        margin-bottom: 4%;
+        width: 100%;
+        text-align: center;
+    }
+    
+    form input[type=submit] {
+        margin-top: 10%;
+        background-color: #FFFFFF;
+        border: 1px solid #000000;
+        border-radius: 20px;
+        padding: 1% 5%;
+        cursor: pointer;
+    }
 
     .h1Home {
         width: 100%;
@@ -30,11 +84,14 @@ body {
     }
 
     .h2Home {
+        border-top: 1px black solid;
+        margin-top: 5% !important;
+        padding-top: 5% !important;
         text-align: center;
         overflow-y: hidden;
     }
 
-    .col-12 {
+    .cardTheme {
         width: 100%;
         font-size: medium;
         text-align: center;
@@ -42,21 +99,71 @@ body {
 
     .pHome {
         width: 100%;
-        height: 50px;
+        height: auto;
         margin-top: 10% !important;
     }
 
-    .col-12 > img {
-        width: 350px;
-        height: 350px;
+    .cardTheme > img {
+        width: 250px;
+        height: 250px;
         object-fit: cover;
         border-radius: 5px;
     }
 
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 500px) {
 
+
+    
+    section {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    article {
+        width: 70%;
+        height: 70vh;
+        background-color: #FFFFFF;
+        position: relative;
+        top: 15%;
+        left: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    
+    form {
+        margin-top: 3%;
+        margin-bottom: 3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    form p {
+        margin-bottom: 4%;
+        width: 100%;
+        text-align: center;
+    }
+    
+    form input[type=submit] {
+        margin-top: 10%;
+        background-color: #FFFFFF;
+        border: 1px solid #000000;
+        border-radius: 20px;
+        padding: 1% 5%;
+        cursor: pointer;
+    }
 
     .h1Home {
         width: 100%;
@@ -81,19 +188,22 @@ body {
         overflow-y: hidden;
     }
 
-    .col-12 {
+    .cardTheme {
         width: 100%;
         font-size: medium;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .pHome {
-        width: 100%;
+        width: 90%;
         height: 50px;
         margin-top: 10% !important;
     }
 
-    .col-12>img {
+    .cardTheme>img {
         width: 350px;
         height: 350px;
         object-fit: cover;

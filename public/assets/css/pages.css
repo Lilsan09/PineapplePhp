@@ -9,6 +9,9 @@ body {
     height: 100vh;
 }
 
+@media screen and (min-width: 500px){
+    
+
 .h1Home {
     width: 100%;
     text-align: center;
@@ -27,7 +30,14 @@ body {
     margin-bottom: 5%;
 }
 
-.col-12 {
+.cardThemePages {
     width: 50%;
     display: flex;
+}
+
+.cardThemePages > img {
+    width: 350px !important;
+    height: 350px !important;
+    object-fit: cover;
+}
 }
