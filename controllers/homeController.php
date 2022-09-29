@@ -22,19 +22,20 @@ $urlConnectObject = 'https://www.01net.com/actualites/produits/objets-connectes-
 $rssConnectObject = simplexml_load_file($urlConnectObject);
 $titleConnectObject =  $rssConnectObject->channel->title;
 
-
 define('THEMES', array($rssSmartphone, $rssTablette, $rssPcPortable, $rssPcPeripherique, $rssConnectObject));
-
-
-$cookieOne = $_COOKIE['cookie1'];
-$cookieTwo = $_COOKIE['cookie2'];
-$cookieThree = $_COOKIE['cookie3'];
+define('ARTICLE_AMOUNT_VALUES', array(6, 8, 10));
 
 $themes = $_GET['themes'] ?? [];
+$cookieOne = $_COOKIE['cookie1'] ?? $themes[0] ?? '';
+$cookieTwo = $_COOKIE['cookie2'] ?? $themes[1] ?? '';
+$cookieThree = $_COOKIE['cookie3'] ?? $themes[2] ?? '';
 $cookieCounter = 1;
 
-if (!empty($themes)) {
+$articleAmount = $_GET['articleAmount'] ?? '';
+$cookieAmount = $_COOKIE['cookieAmount'] ?? 10;
 
+
+if (!empty($themes)) {
     if (count($themes) != 3) {
         echo "<script>
         alert('Veuillez cocher 3 themes');
@@ -53,7 +54,9 @@ if (!empty($themes)) {
         }
     }
 }
-
+if (in_array($articleAmount, ARTICLE_AMOUNT_VALUES)) {
+    setcookie('cookieAmount', $articleAmount, time() + (86400 * 30));
+}
 
 include(__DIR__ . '/../views/template/header.php');
 include(__DIR__ . '/../views/home.php');

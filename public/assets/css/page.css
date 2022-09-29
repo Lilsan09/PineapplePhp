@@ -1,0 +1,139 @@
+@font-face {
+    font-family: gotham;
+    src: url(../fonts/GOTHAMMEDIUM.TTF);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: gotham;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: gotham;
+}
+
+@media screen and (max-width: 425px) {
+
+
+    .h1Pages {
+        width: 100%;
+        text-align: center;
+        text-decoration: underline;
+        margin-top: 5% !important;
+        margin-bottom: 5% !important;
+    }
+
+    .h2Pages {
+        width: 100%;
+        margin-bottom: 3% !important;
+        padding-top: 1%;
+    }
+
+    .pageCont {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .row {
+        width: 100%;
+        margin: 0!important;
+        margin-bottom: 5%;
+    }
+
+    .cardThemePages {
+        width: 100%;
+        height: 100%;
+        margin-top: 1%;
+        margin-bottom: 5%;
+    }
+
+    .cardThemePages>img {
+        width: 100%;
+        height: 50%;
+        border-radius: 10px 10px 0 0;
+        object-fit: cover;
+    }
+
+    .descript {
+        width: 100%;
+        height: 100%;
+        border: 1px black solid;
+        border-top: none;
+        border-radius: 0 0 10px 10px;
+        text-align: center;
+    }
+
+    .descript>p>img {
+        display: none;
+    }
+
+    .descript a {
+        color: #3f79b5;
+    }
+}
+
+@media screen and (min-width: 425px) {
+
+
+    .h1Pages {
+        width: 100%;
+        text-align: center;
+        text-decoration: underline;
+        margin-top: 5% !important;
+        margin-bottom: 5% !important;
+        overflow-y: hidden;
+    }
+
+    .h2Pages {
+        width: 100%;
+        margin-bottom: 3% !important;
+    }
+
+    .pageCont {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .row {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .cardThemePages {
+        width: 50%;
+        height: auto;
+        display: flex;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    .cardThemePages>img {
+        width: 40%;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+        object-fit: cover;
+    }
+
+    .descript {
+        width: 60%;
+        height: 100%;
+        text-align: center;
+        border: 1px black solid;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .descript>p>img {
+        display: none;
+    }
+
+    .descript a {
+        color: #3f79b5;
+    }
+}

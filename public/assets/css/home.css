@@ -5,13 +5,12 @@
 * {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     font-family: gotham;
 }
 
 body {
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 @media screen and (max-width: 425px) {
@@ -42,7 +41,7 @@ body {
         text-align: center;
     }
     
-    form {
+    #start#startForm {
         margin-top: 3%;
         margin-bottom: 3%;
         display: flex;
@@ -51,13 +50,13 @@ body {
         align-items: center;
     }
     
-    form p {
+    #start#startForm p {
         margin-bottom: 4%;
         width: 100%;
         text-align: center;
     }
     
-    form input[type=submit] {
+    #start#startForm input[type=submit] {
         margin-top: 10%;
         background-color: #FFFFFF;
         border: 1px solid #000000;
@@ -68,15 +67,11 @@ body {
 
     .h1Home {
         width: 100%;
-        height: 10vh;
         text-align: center;
         text-decoration: underline;
         margin-top: 5% !important;
         margin-bottom: 5% !important;
-        overflow-y: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding-top: 10px;
     }
 
     .container {
@@ -92,7 +87,7 @@ body {
         margin-top: 5% !important;
         padding-top: 5% !important;
         text-align: center;
-        overflow-y: hidden;
+        
     }
 
     .cardTheme {
@@ -104,7 +99,9 @@ body {
     .pHome {
         width: 100%;
         height: auto;
-        margin-top: 10% !important;
+        margin-top: 15% !important;
+        border-top: 1px black solid;
+        padding-top: 4%;
     }
 
     .cardTheme > img {
@@ -145,7 +142,7 @@ body {
         text-align: center;
     }
     
-    form {
+    #startForm {
         margin-top: 3%;
         margin-bottom: 3%;
         display: flex;
@@ -154,13 +151,13 @@ body {
         align-items: center;
     }
     
-    form p {
+    #startForm p {
         margin-bottom: 4%;
         width: 100%;
         text-align: center;
     }
     
-    form input[type=submit] {
+    #startForm input[type=submit] {
         margin-top: 10%;
         background-color: #FFFFFF;
         border: 1px solid #000000;
@@ -175,7 +172,7 @@ body {
         text-decoration: underline;
         margin-top: 5% !important;
         margin-bottom: 5% !important;
-        overflow-y: hidden;
+        padding-top: 50px;
     }
 
     .container {
@@ -184,16 +181,21 @@ body {
     }
 
     .row {
+        width: auto;
         margin-bottom: 5%;
+        height: 20%;
     }
 
     .h2Home {
+        width: 100%;
+        height: 2%;
         text-align: center;
-        overflow-y: hidden;
+        padding-top: 50px;
     }
 
     .cardTheme {
         width: 100%;
+        height: 100%;
         font-size: medium;
         text-align: center;
         display: flex;
@@ -202,9 +204,13 @@ body {
     }
 
     .pHome {
-        width: 90%;
-        height: 50px;
-        margin-top: 10% !important;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        margin-top: 4%;
+        margin-bottom: 0 !important;
+        font-size: medium;
     }
 
     .cardTheme>img {
@@ -212,6 +218,7 @@ body {
         height: 350px;
         object-fit: cover;
         border-radius: 5px;
+        margin: 15%;
     }
 
 }

@@ -30,11 +30,14 @@
         </ul>
     </div>
     <div class="madeBy">
-        <h5>Développé par Tristan Waquiet, Anthonin Mouveaux et Alexis Ferrer</h5>
+        <h5>Développé par Tristan Waquet, Anthonin Mouveaux et Alexis Ferrer</h5>
     </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+</div>
 <script src="../../public/assets/js/script.js"></script>
+<!---- .__(.)< (MEOW)
+        \___)   
+~~~~~~~~~~~~~~~~~~ -->
 </body>
 
 </html>
