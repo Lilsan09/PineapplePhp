@@ -41,21 +41,22 @@ const body = document.querySelector('body');
 const title = document.querySelector('.header-title')
 const burgerM = document.querySelector('#menu-button');
 const h2Actu = document.querySelector('.h1Home');
-const h2home = document.querySelector('.h2Home');
+const h2home = document.querySelectorAll('.h2Home');
 const allP = document.querySelectorAll('p');
 
-console.log(allP);
+console.log(h2home);
 // burgerM.style.color='rgb(0, 0, 0)';
 title.style.color='rgb(0, 0, 0)';
 header.style.backgroundColor='rgb(255, 255, 255)';
 body.style.backgroundColor='rgb(242, 242, 242)';
 switchBtn.style.color='rgb(239, 215, 0)';
 h2Actu.style.color='rgb(0, 0, 0)';
-h2home.style.color='rgb(0, 0, 0)';
-// allP.style.color='rgb(0, 0, 0)';
+h2home.forEach(element=>{
+    element.style.color='rgb(0, 0, 0)'
+})
+
 allP.forEach(element => {
     element.style.color='rgb(0, 0, 0)';
-    console.log(element);
 });
 
 switchBtn.addEventListener('click', () =>{
@@ -68,11 +69,13 @@ switchBtn.addEventListener('click', () =>{
         switchBtn.style.color='rgb(0, 0, 0)';
         burgerM.style.color='rgb(255, 255, 255)';
         h2Actu.style.color='rgb(255, 255, 255)';
-        h2home.style.color='rgb(255, 255, 255)';
+        // h2home.style.color='rgb(255, 255, 255)';
         allP.forEach(element => {
             element.style.color='rgb(255, 255, 255)';
         });
-        
+        h2home.forEach(element=>{
+            element.style.color='rgb(255, 255, 255)';
+        });
     } else {
         header.style.backgroundColor= 'rgb(255, 255, 255)';
         body.style.backgroundColor='rgb(242, 242, 242)';
@@ -82,8 +85,10 @@ switchBtn.addEventListener('click', () =>{
         switchBtn.style.color='rgb(255, 255, 255)';
         burgerM.style.color='rgb(0, 0, 0)';
         h2Actu.style.color='rgb(0, 0, 0)';
-        h2home.style.color='rgb(0, 0, 0)';
         allP.forEach(element => {
+            element.style.color='rgb(0, 0, 0)';
+        });
+        h2home.forEach(element => {
             element.style.color='rgb(0, 0, 0)';
         });
     }

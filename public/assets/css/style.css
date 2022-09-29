@@ -111,6 +111,11 @@ padding:62px 12px 12px 12px;
     height: 40px;
 }
 
+#switchMode:hover {
+    transition: 300ms;
+    transform: scale(1.5);
+}
+
 .footerContainer {
     display: flex;
     width: 100vw;
